@@ -165,4 +165,4 @@ class Motors:
 motors = Motors(11, 12, 13, 15, 16, 18, 22, 7)
 
 while True:
-    motors.move(1, 0.3)
+    motors.move(1, 1)
