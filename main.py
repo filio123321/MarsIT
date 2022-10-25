@@ -150,3 +150,6 @@ class Motors:
         self.state = direction
         
 motors = Motors(11, 12, 13, 15, 16, 18, 22, 7)
+
+
+motors.move(1, 0.8)
