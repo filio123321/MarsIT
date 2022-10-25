@@ -15,9 +15,22 @@ class Motors:
               
         self.state = 0 # 0 = stopped, 1 = forward, 2 = backward, 3 = clockwise, 4 = counter-clockwise
         
-        self.base_right = 1 # clockwise where forward
-        self.base_left = 0 # counter-clockwise where forward
+        GPIO.setmode(GPIO.BCM)
         
+        GPIO.setup(Lpin1, GPIO.OUT)
+        GPIO.setup(Lpin2, GPIO.OUT)
+        GPIO.setup(Lpin3, GPIO.OUT)
+        GPIO.setup(Lpin4, GPIO.OUT)
+        
+        GPIO.setup(Rpin1, GPIO.OUT)
+        GPIO.setup(Rpin2, GPIO.OUT)
+        GPIO.setup(Rpin3, GPIO.OUT)
+        GPIO.setup(Rpin4, GPIO.OUT)
+        
+        self.coil1(0)
+        self.coil2(0)
+        self.coil3(0)
+        self.coil4(0)
     
     def coil1(self, state): # left
         if state == 1:
