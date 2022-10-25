@@ -15,7 +15,7 @@ class Motors:
               
         self.state = 0 # 0 = stopped, 1 = forward, 2 = backward, 3 = clockwise, 4 = counter-clockwise
         
-        GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BOARD)
         
         GPIO.setup(Lpin1, GPIO.OUT)
         GPIO.setup(Lpin2, GPIO.OUT)
